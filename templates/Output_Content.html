@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Output-Content</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='icon.jpg') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+<style>
+#copying
+{
+background-color:black;
+color: white;
+padding: 6px 18px;
+}
+#copying:hover
+{
+background-color:#088;
+color:white;
+}
+#download
+{
+background-color:black;
+color: white;
+padding: 6px 18px;
+}
+#download:hover
+{
+background-color:#088;
+color:white;
+}
+#myInput
+{
+display: block;
+resize: none;
+height:200px;
+width:450px;
+}
+body {
+  background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url("{{ url_for('static', filename='976113.png')}}");
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+}
+body, html, .body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  overflow: hidden;
+}
+.card {
+  background: #000000;
+  border-radius: 3px solid white;
+  display: inline-block;
+  font-weight:600;
+  height: 450px;
+  margin: 1rem;
+  position: relative;
+  width: 600px;
+  opacity:0.5;
+  color:#ffffff;
+}
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+textarea
+{
+color: #ffffff;
+font-size:17px;
+font-weight:600;
+font-family: 'Ubuntu', sans-serif;
+}
+</style>
+<script>
+ window.onload = function()
+	  {
+	  var txt = document.getElementById('myInput');
+      document.getElementById('download').onclick = function(code)
+		{
+      this.href = 'data:text/doc;charset=utf-8,' + encodeURIComponent(txt.value);
+        };
+      };
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+main();
+</script>
+</head>
+<body>
+  <h1 align="center" style="color:white;">Output Summarized Text :</h1><br>
+<div class="card card-1">
+  <br><br>{{ res }}<br><br><br>
+  <div id="editor"></div>
+  <center>EDIT <i class="fa fa-hand-o-down"> -- </i> Download <a download="Summarizied-Content.doc" id="download" title="Download as doc"><i class="fa fa-cloud-download"></i></a>  Copy  <button title="Copy to Clipboard" id="copying" onclick="myFunction()"><i class="fa fa-copy"></i></button>
+    <textarea id="myInput" style="background-color:#000000;">{{ res }}</textarea>
+</center>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Textify-a Text preprocessing web application</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.jpg') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    html{
+      background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url("{{ url_for('static', filename='976113.png')}}");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat !important;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    body, html, .body{
+      height: 100%;
+      width: 100%;
+    }
+    body{
+      overflow: hidden;
+    }
+    .body{
+      display: table;
+    }
+    nav{
+     display: flex;
+     position: fixed;
+     top:0;
+     width: 100%;
+     background-color: none;
+     overflow: auto;
+     height: auto;
+   }
+   .left-links{
+       flex:1 1 200px;
+    }
+    .links {
+       display: inline-block;
+       text-align: center;
+       padding: 14px;
+       color: #ffffff;
+       text-decoration: none;
+       font-size: 17px;
+       font-weight: bolder;
+    }
+    .links:hover {
+       background-color:#088;
+    }
+    .selected{
+       border-bottom: 2px solid purple;
+    }
+    textarea
+    {
+      color:#ffffff;
+      font-size:17px;
+      font-weight:600;
+      opacity: 0.5;
+      padding: 10px;
+      margin: 35px;
+    }
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .btn {
+      color: gray;
+      background-color: #000000;
+      border: 2px solid white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .btn:hover {
+     color:white;
+     background-color:green;
+    }
+    .upload-btn-wrapper input[type=file] {
+      font-size: 10px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 6px 18px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight:600;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #4CAF00;
+    }
+    .wrapper{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .info{
+      margin: 0.5em 0;
+      font-size: 1.25em;
+      color: #FFF;
+      text-shadow: 0 0 0.5em #000;
+    }
+    .input-phone{
+      display: block;
+      margin: 1em auto;
+      padding: 0.5em 0.25em;
+      border: none;
+      border-radius: 0.2em;
+      font-size: 1.5em;
+      text-align: center;
+      box-shadow: 0 0 1em 0.25em rgba(0,0,0,0.2);
+    }
+  </style>
+  <body>
+    <nav>
+      <div class="left-links">
+      <a class="links" href="{{ url_for('index') }}">Textify - a text preprocessing web application</a>
+      </div>
+      <div class="right-links">
+      <a class="links selected">Text-Generator</a>
+      </div>
+    </nav>
+    <div class="body" ng-app="myApp">
+        <div class="wrapper" ng-controller="MyCtrl">
+    	<h1 style="color:white;">TEXT GENERATE</h1>
+    <form name="form" action="http://127.0.0.1:5000/outputgen"  method="POST">
+      <textarea cols="45" rows="20" name="textarea_ofinp" id="textarea" style="background-color:#000000;">{{ reret }}</textarea>
+      <textarea cols="45" rows="20" id="textarea" style="background-color:#000000;">{{ ret }}</textarea>
+    <br>
+    <br>
+    	<div class="button">
+    	<input type="submit" class="button" value="SUBMIT">
+    	</div>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>
