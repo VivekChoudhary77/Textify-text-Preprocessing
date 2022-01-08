@@ -10,9 +10,9 @@ json5==0.9.5
 markdown2==2.4.1
 MarkupSafe==1.1.1
 nltk==3.6.1
-tensorflow==2.3.0
-tokenizers==0.10.3
-torch==1.10.0
-torchaudio==0.10.0
-torchvision==0.11.1
-transformers==4.11.3
+tensorflow
+tokenizers
+torch
+torchaudio
+torchvision
+transformers
