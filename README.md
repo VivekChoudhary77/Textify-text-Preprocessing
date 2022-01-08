@@ -4,7 +4,7 @@
 ### Technologies used
 + [Flask](https://flask.palletsprojects.com/en/2.0.x/) (**A micro web Framework**)
 + [nltk](https://www.nltk.org/) (**Python Library**)
-+ [Hugging Face GPT-2](https://huggingface.co/) (**For text generation**)
++ [Hugging Face GPT-2](https://huggingface.co/gpt2) (**For text generation**)
 + [HTML,CSS,JS](https://www.w3schools.com/whatis/) (**Frontend Landing Page**)
 + [Pyhton](https://www.python.org/) (**Programming language For Backend**)
 + [Pytorch](https://pytorch.org/) (**For text generation**)
