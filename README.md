@@ -5,7 +5,7 @@
 + [Flask](https://flask.palletsprojects.com/en/2.0.x/) (**A micro web Framework**)
 + [nltk](https://www.nltk.org/) (**Python Library**)
 + [Hugging Face GPT-2](https://huggingface.co/gpt2) (**For text generation**)
-+ [HTML,CSS,JS](https://www.w3schools.com/whatis/) (**Frontend Landing Page**)
++ [HTML,CSS,JS](https://www.w3schools.com/whatis/) (**Core technologies for building webpages**)
 + [Pyhton](https://www.python.org/) (**Programming language For Backend**)
 + [Pytorch](https://pytorch.org/) (**For text generation**)
 + [Tensorflow](https://www.tensorflow.org/) (**An end-to-end open source machine learning platform**)
