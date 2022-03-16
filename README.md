@@ -6,7 +6,7 @@
 + [nltk](https://www.nltk.org/) (**Python Library**)
 + [Hugging Face GPT-2](https://huggingface.co/gpt2) (**For text generation**)
 + [HTML,CSS,JS](https://www.w3schools.com/whatis/) (**Core technologies for building webpages**)
-+ [Pyhton](https://www.python.org/) (**Programming language For Backend**)
++ [Python](https://www.python.org/) (**Programming language For Backend**)
 + [Pytorch](https://pytorch.org/) (**For text generation**)
 + [Tensorflow](https://www.tensorflow.org/) (**An end-to-end open source machine learning platform**)
 ---
